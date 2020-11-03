@@ -1,46 +1,99 @@
 # budget-tracker
 
-# Unit 18 PWA Homework: Online/Offline Budget Trackers
 
-Add functionality to our existing Budget Tracker application to allow for offline access and functionality.
+#Link to application:  
+https://mysterious-basin-13178.herokuapp.com/
 
-The user will be able to add expenses and deposits to their budget with or without a connection. When entering transactions offline, they should populate the total when brought back online.
-
-Offline Functionality:
-
-  * Enter deposits offline
-
-  * Enter expenses offline
-
-When brought back online:
-
-  * Offline entries should be added to tracker.
-
-## User Story
-AS AN avid traveller
-I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
-SO THAT my account balance is accurate when I am traveling
-
-## Business Context
-
-Giving users a fast and easy way to track their money is important, but allowing them to access that information anytime is even more important. Having offline functionality is paramount to our applications success.
+Link to GitHub repository:  
+https://github.com/git99-src/budget-tracker  
 
 
-## Acceptance Criteria
-GIVEN a user is on Budget App without an internet connection
-WHEN the user inputs a withdrawal or deposit
-THEN that will be shown on the page, and added to their transaction history when their connection is back online.
+## Description 
+The budget tracker application allows the user to track withdrawals and deposits online. The user will be able enter the name for the transaction and the amount. If the user loses connectivity to the internet - they can continue to enter transactions which will be synched to the original database when the connection is restored. A chart is displayed to show the history of the user's balance over time.  
 
-## Starter Code
+## Table of Contents 
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Development](#development)
+  * [License](#license)
+  * [Contributing](#contributing)
+  * [Env](#env)
 
-You have been provided with a nearly functional app in `./Develop`. Your task is to update the app so that it is a PWA. 
+## Installation
 
-* Update the client (front-end) to use the IndexedDB api to store transactions entered by the user when the app is offline and "sync" up with the server whenever the app goes online by posting any transactions that were stored while offline.
+If you are interested in installing and using the project, you can do so by forking the GitHub repository and cloning it to your machine.  
 
-* Debug any client (front-end) errors visible in the Chrome Developer Tools Console.
+To use the app, simply follow the provided Heroku link. In addition to running this via the link, this web application can also be installed as a PWA onto the PC desktop or mobile device.  After navigating to the URL:
 
-* Create a `manifest.json` file in `/public` and link it in `/public/index.html`.
+* Windows PC:
 
-* Implement a service worker to cache resources necessary for required offline functionality.
+  * 1. Press the "+" in the address bar.
 
-* Users should be able to "install" the app for a native-like experience.
+  * 2. Select Install.
+
+* iOs:
+
+  * 1. Tap the Share button in Safari.
+
+  * 2. Tap the icon labeled Add to Home Screen.
+
+  * 3. Tap Add in the upper-right corner.
+
+  * 4. Name the application icon (or use default provided), then tap Add in the upper-right corner.
+
+  
+* Android:
+
+  * 1. Tap the menu button in the upper right corner of Chrome.
+
+  * 2. Tap the icon labeled Add to Home Screen.
+
+  * 3. Name the application icon (or use default provided), then tap Add in the upper-right corner.
+
+
+ ## Usage
+
+The user is presented with the application screen which displays the current total balance.  There is a field to enter the name of the transaction and a field to enter the transaction amount.  Once the user enters values into these fields - they can press the Add Funds button (if the transaction will add to the balance) or the Subtract Funds button (if the transaction will remove funds from the balance).  
+
+Once the transaction has been completed, the new balance will be displayed.  In addition, the total balance chart will update to reflect the new balance.
+
+To use the app, simply follow the provided Heroku link at the link above. 
+
+## Development 
+
+The program used to write the application is VS Code. It was developed using MongoDb and Mongoose to create and design the schema. The app uses the following programming languages:    
+
+* Back End:
+   * Node.js
+   * Mongoose
+   * Express
+
+
+* Front End: 
+   * HTML
+   * CSS
+   * JavaScript/JQuery  
+
+The app also uses various npm packages to run: 
+* express
+* mongoose
+* morgan
+* compression
+* lite-server
+
+The app is deployed on Heroku and uses MongoDB as a database on Heroku.  
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) MIT License  
+
+## Contributing
+Please fork the repository in Github with permission.  
+
+## Env
+Requires a ".env" file created in root.
+--
+**MONGODB_URI** = locationofdatabase
+ 
+--
+---
